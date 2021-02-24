@@ -1,0 +1,8 @@
+{
+    "/search": {
+      "target": "http://localhost:4500/search/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }

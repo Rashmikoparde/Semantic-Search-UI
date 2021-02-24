@@ -1,0 +1,13 @@
+<div class='search'>
+    <div class='search--header'>
+        <h1 class="search--title" >Semantic Blog Search</h1>
+        <br />
+        <div class="search--searchbox form-group has-search dropdown" >
+            <input #searchQuery class="form-control search--input" placeholder="Enter search query" > 
+            <button type="button" class="btn btn-primary search--button" (click) ='onSearch()'>Search</button>
+        </div>
+     </div>
+</div>
+
+<app-result [searchedQuery]='searchedQuery'  [searchResults]='searchResults' ></app-result>
+

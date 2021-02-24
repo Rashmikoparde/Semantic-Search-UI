@@ -1,0 +1,18 @@
+<div class='results'> 
+    <div *ngFor='let post of results; let index = index'
+    [class]='clicked_book_index == index ?  "results--container results--selected-container": "results--container"'>
+    <div>
+        <span id='close' class="closebutton" (click)='collapseSeeMore()'>X</span>
+
+        <span class="results--title">Similarity Score: {{post.score}}</span>
+        <span class="results--title">Label: {{post.label}}</span>
+        <span class="results--title">Gender: {{post.gender}}</span>
+        <span class="results--title">Zodiac Sign: {{post.zodiac_sign}}</span>
+        <span class="results--title"></span>
+        <br/> 
+        <span class='results--descriptionSeeMore'  *ngIf="clicked_book_index == index">{{post.pos_text}}</span>
+        <span class='results--description'  *ngIf="clicked_book_index != index">{{post.pos_text.slice(0,300)}}...</span>
+
+        <span class="results--see_more" (click)='seeMoreDetails(index)'>See More</span>
+    </div> 
+</div>
